@@ -1,10 +1,13 @@
-from flask import Flask, url_for, render_template,request
+from flask import Flask, url_for, render_template, request
+
 app = Flask(__name__)
 
+
 @app.route('/')
-# @app.route('/<name>')
+@app.route('/<name>')
 def hello(name=None):
     return render_template('index.html', name=name)
+
 
 # @app.route('/test/')
 # def test():
@@ -25,4 +28,3 @@ def hello(name=None):
 
 if __name__ == '__main__':
     app.run(debug=True)
-1
